@@ -10,7 +10,13 @@ export default App extends React.Component {
   }
 
   componentDidMount(){
-
+    fetch('http://api.open-notify.org/astros.json')
+    .then(res => res.json)
+    .then(data=>{
+      this.setState({
+        peoples: data.people
+      })
+    })
   }
 
   render(){
