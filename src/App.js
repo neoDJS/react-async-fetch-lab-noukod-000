@@ -15,8 +15,8 @@ export default App extends React.Component {
     .then(data=>{
       this.setState({
         peoples: data.people
-      })
-    })
+      });
+    });
   }
 
   render(){
